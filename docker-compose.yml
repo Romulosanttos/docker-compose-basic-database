@@ -1,0 +1,33 @@
+version: "3"
+services:
+  postgresSQL:
+    image: postgres
+    container_name: postgresSQL
+    hostname: postgresSQL
+    ports:
+        - 5432:5432
+    environment:
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_USER: postgres
+  mongoDB:
+    image: mongo:latest
+    container_name: mongoDB
+    hostname: mongoDB
+    ports:
+      - 27017:27017
+  pgadmin4:
+    image: fenglc/pgadmin4
+    container_name: pgadmin4
+    hostname: pgadmin4
+    ports:
+      - 5050:5050
+    links:
+      - postgresSQL:postgres
+  rancher:
+    image: rancher/server:stable
+    container_name: rancher
+    hostname: rancher
+    ports:
+		  ports:
+		    - 6060:8080
+		
