@@ -5,7 +5,9 @@
   1. docker compose https://docs.docker.com/compose/install/
   
 * comando para inicializar os containners (linux)
-   1. docker-compose up -d .
+
+  ``executar dentro da pasta aonde está o arquivo baixado docker-compose.yml``
+   * $ sudo docker-compose up -d 
   
 * variaveis para o postgres
   * POSTGRES_PASSWORD 
@@ -23,5 +25,10 @@
   
 * Use este conta de administrador padrão para logar no postgres:
   * port: 27017
+  * user: null
+  * password: null
+
+* Use este conta de administrador padrão para logar no rancher:
+  * port: 6060
   * user: null
   * password: null
