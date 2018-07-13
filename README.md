@@ -3,7 +3,13 @@
 * requesitos
   1. docker ce 17.13 https://docs.docker.com/install/ 
   1. docker compose https://docs.docker.com/compose/install/
-  
+
+* containers
+  * postgres:latest
+  * fenglc/pgadmin4
+  * rancher/server:stable
+  * mongo:latest
+
 * comando para inicializar os containners (linux)
 
   ``executar dentro da pasta aonde está o arquivo baixado docker-compose.yml``
