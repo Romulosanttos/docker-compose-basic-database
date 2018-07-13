@@ -1,7 +1,7 @@
 version: "3"
 services:
   postgresSQL:
-    image: postgres
+    image: postgres:latest
     container_name: postgresSQL
     hostname: postgresSQL
     ports:
@@ -28,6 +28,5 @@ services:
     container_name: rancher
     hostname: rancher
     ports:
-		  ports:
-		    - 6060:8080
+      - 6060:8080
 		
