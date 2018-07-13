@@ -29,4 +29,3 @@ services:
     hostname: rancher
     ports:
       - 6060:8080
-		
