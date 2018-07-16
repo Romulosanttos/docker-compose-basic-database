@@ -1,31 +1,42 @@
 version: "3"
 services:
   postgresSQL:
-    image: postgres:latest
+    image: postgres
     container_name: postgresSQL
     hostname: postgresSQL
-    ports:
-        - 5432:5432
     environment:
       POSTGRES_PASSWORD: postgres
       POSTGRES_USER: postgres
+    networks:
+      webproxy:
+         ipv4_address: 192.168.1.2
   mongoDB:
     image: mongo:latest
     container_name: mongoDB
     hostname: mongoDB
-    ports:
-      - 27017:27017
+    networks:
+      webproxy:
+         ipv4_address: 192.168.1.3
   pgadmin4:
     image: fenglc/pgadmin4
     container_name: pgadmin4
-    hostname: pgadmin4
-    ports:
-      - 5050:5050
+    hostname: pgadmin4    
+    networks:
+      webproxy:
+         ipv4_address: 192.168.1.4
     links:
       - postgresSQL:postgres
   rancher:
     image: rancher/server:stable
     container_name: rancher
     hostname: rancher
-    ports:
-      - 6060:8080
+    networks:
+       webproxy: 
+         ipv4_address: 192.168.1.5
+
+networks:
+  webproxy:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 192.168.1.0/16
