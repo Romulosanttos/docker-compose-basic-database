@@ -14,14 +14,13 @@
 
  _executar dentro da pasta aonde está o arquivo baixado docker-compose.yml_
 
-  
-1. deleta todos os container
+* deleta todos os container
   * $ sudo docker rm -f $(sudo docker ps -a -q)
   
-1. deleta os container do compose``
+* deleta os container do compose
   * $ sudo docker rm -f rancher pgadmin4 mongoDB postgresSQL
   
-1. iniciar o compose 
+* iniciar o compose 
   * $ sudo docker-compose up -d 
   
 ### variáveis
