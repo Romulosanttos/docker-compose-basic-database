@@ -6,7 +6,7 @@
 
 * containers
   * postgres:latest
-  * fenglc/pgadmin4
+  * dpage/pgadmin4
   * rancher/server:stable
   * mongo:latest
 
@@ -15,17 +15,14 @@
  _executar dentro da pasta aonde está o arquivo baixado docker-compose.yml_
 
   
-* deleta todos os container
- 
- $ sudo docker rm -f $(sudo docker ps -a -q)
+1. deleta todos os container
+  * $ sudo docker rm -f $(sudo docker ps -a -q)
   
-* deleta os container do compose``
- 
- $ sudo docker rm -f rancher pgadmin4 mongoDB postgresSQL
+1. deleta os container do compose``
+  * $ sudo docker rm -f rancher pgadmin4 mongoDB postgresSQL
   
-*  iniciar o compose 
-
-   $ sudo docker-compose up -d 
+1. iniciar o compose 
+  * $ sudo docker-compose up -d 
   
 ### variáveis
 1. postgres
