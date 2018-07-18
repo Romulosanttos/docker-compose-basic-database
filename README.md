@@ -20,7 +20,7 @@ Deleta todos os container
 Deleta os container do compose
 > $ sudo docker rm -f rancher pgadmin4 mongoDB postgresSQL
   
-Dniciar o compose 
+Iniciar o compose 
 > $ sudo docker-compose up -d 
   
 ### variáveis
@@ -51,3 +51,9 @@ Dniciar o compose
    * host: 192.168.1.5:6060
    * user: null
    * password: null
+### Contributing
+1. Fork it!
+1. Create your feature branch: git checkout -b my-new-feature
+1. Commit your changes: git commit -am 'Add some feature'
+1. Push to the branch: git push origin my-new-feature
+1. Submit a pull request :D
